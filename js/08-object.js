@@ -130,3 +130,36 @@ console.log('-----------------------');
 console.log(student.movies[0].title);
 console.log(student.movies[1].title);
 console.log(student.movies[2].title);
+
+console.clear();
+
+const skaiciai = [10, 2, 8];
+console.log(skaiciai);
+
+skaiciai[0] = 1000; // apsirasius masyva, galima kai kurias reiksmes jame pakeisti
+console.log(skaiciai);
+
+const auto = {
+    marke: 'Audi',
+};
+
+console.log(auto);
+
+auto.marke = 'Audine';
+console.log(auto);
+
+auto.kaina = 1000;
+console.log(auto);
+console.log(auto.kaina);
+
+auto.color = 'red';
+console.log(auto); // galima vis papildyti elelmentus naudojant raktini zodi (pvz auto)
+auto.color = 'blue';
+console.log(auto);
+
+delete auto.color // galima istrinti nereikalingus elementus
+console.log(auto);
+
+auto.savininkai = [];
+console.log(auto);
+
