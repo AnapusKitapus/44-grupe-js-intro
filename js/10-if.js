@@ -4,9 +4,14 @@ console.clear();
 IF - palyginimas
 
 Palyginimo operatoriai:
-Visi: >, <, >=, <=, ==, ===,
-Naudotini: >, <, >=, <=, ===,
-Nenaudotini: ==,
+Visi: >, <, >=, <=, ==, ===, !=, !==,
+Naudotini: >, <, >=, <=, ===, !==,
+Nenaudotini: ==, !=,
+
+Loginiai operatoriai:
+&& (and) 
+|| (or (arba))
+! (not)
 
 kodo sablonai:
 if () {}
@@ -194,3 +199,83 @@ console.log(kokiaSavaitesDiena(1));
 console.log(kokiaSavaitesDiena(2));
 console.log(kokiaSavaitesDiena(7));
 console.log(kokiaSavaitesDiena(8));
+
+console.log('-------------------'); // apkeitimas su sauktuku (!)
+
+if (777 !== 777) {
+    console.log('nelygu');
+} else {
+    console.log('lygu');
+}
+
+console.clear();
+
+// jeigu == tada ima tik skaicius esancius kabutese ir lygina su skaiciais, jeigu === lygina kartu su kabutemis. == yra nenaudotina
+
+if ('888' === 888) {
+    console.log('taip');
+} else {
+    console.log('ne');
+}
+
+// Loginiai operatoriai
+
+if (4 > 2) {
+    if (8 < 20) {
+        console.log('>>> and 1')
+    }
+}
+
+if (4 > 2 && 8 < 20) { // visos salygos turi tenkinti kuomet yra &&
+    console.log('>>> and 2');
+}
+
+if (1 < 0 || 2 < 4) { // kada bent jau viena salyga tenkina ||
+    console.log('>>> arba');
+}
+
+if (0 === 0 || 2 === 8 && 4 === 4) {
+    console.log('mix');
+}
+
+//(0 === 0 || 2 === 8 && 4 === 4)
+//(true || 2 === 8) && 4 === 4
+//(true || false) && 4 === 4
+//true && 4 === 4
+//true && true
+//true
+
+console.log('-------------------');
+
+const a = false;
+
+if (!a) { // sauktukas (!) apsuka atsakyma, jeigi (!!) sauktukai grazina atgal
+    console.log('taip');
+} else {
+    console.log('ir ne');
+}
+
+const error = true;
+
+if (!error) {
+    console.log('all good 👍');
+} else {
+    console.log('ERROR');
+}
+
+console.log('-------------------');
+
+// visi skaiciai isskyrus 0 ir NaN yra true
+// undefined visada false
+// null visada false
+// visi string yra true iskyrus tuscia ('')
+// visi function yra true
+// visi array ([]) yra true
+// visi object ({}) yra true
+//
+
+if (2) {
+    console.log('KAZKAS...');
+} else {
+    console.log('Ne Kazka...');
+}
